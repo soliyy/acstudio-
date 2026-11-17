@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC Studio | Beleza Unissex & Atendimento Exclusivo a Domicílio no Imirim — Desde 1972</title>
+  <meta name="description" content="Mais de 50 anos de tradição em beleza no Imirim (desde 1972), agora com atendimento especializado exclusivamente a domicílio na Zona Norte de SP. Mechas, coloração, cortes, barba, sobrancelhas e unhas.">
+  <meta name="keywords" content="AC Studio, cabeleireiro a domicílio Imirim, mechas em casa Zona Norte SP, corte masculino a domicílio, manicure a domicílio Imirim, beleza unissex em casa">
+  <meta name="author" content="AC Studio">
+
+  <!-- Google Fonts: Cormorant Garamond (Títulos Editoriais) + Plus Jakarta Sans & Inter (UI e Leitura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuração Personalizada Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'studio-black': '#0A0A0A',
+            'studio-charcoal': '#121212',
+            'studio-graphite': '#262626',
+            'studio-alabaster': '#F7F7F7',
+            'studio-silver': '#E5E5E5',
+            'studio-muted': '#525252',
+            'whatsapp': '#25D366',
+            'whatsapp-hover': '#1EBE5B',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       ESTILOS CUSTOMIZADOS E ANIMAÇÕES SUTIS (AC STUDIO)
+       ========================================================================== */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111111;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, .editorial-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.01em;
+    }
+
+    /* Botão WhatsApp com Elevação Suave */
+    .btn-wa {
+      background-color: #25D366;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-wa:hover {
+      background-color: #1EBE5B;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -5px rgba(37, 211, 102, 0.45);
+    }
+
+    /* Animação de Revelação Suave ao Rolar */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pulso Discreto no Botão Flutuante */
+    @keyframes wa-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    .wa-float-pulse {
+      animation: wa-pulse 2.6s infinite;
+    }
+
+    /* Acordeão FAQ Suave */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(45deg);
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+    }
+
+    /* Transição de Filtro da Galeria */
+    .portfolio-card {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .portfolio-card.hidden-item {
+      display: none;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-studio-black selection:text-white">
+
+  <!-- ========================================================================
+       1. HEADER (CABEÇALHO FIXO / STICKY NAV)
+       ======================================================================== -->
+  <header class="sticky top-0 z-50 bg-studio-black/95 backdrop-blur-md border-b border-studio-graphite">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Logotipo Oficial AC Studio em SVG Fiel à Identidade -->
+      <a href="#inicio" class="flex items-center group focus:outline-none" aria-label="AC Studio - Início">
+        <svg class="h-12 w-auto" viewBox="0 0 190 78" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo AC Studio">
+          <!-- Letra A minimalista -->
+          <path d="M40 46L55 12L70 46M45 35H65" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Curva estilizada central característica da marca -->
+          <path d="M89 6C81 24 98 44 88 62" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Letra C minimalista -->
+          <path d="M137 18.5C133.5 14.5 128.5 12 122.5 12C112 12 104 20 104 29C104 38 112 46 122.5 46C128.5 46 133.5 43.5 137 39.5" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round"/>
+          <!-- Texto STUDIO espaçado abaixo -->
+          <text x="95" y="71" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="400" letter-spacing="6.5">STUDIO</text>
+        </svg>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-display font-medium text-neutral-300" aria-label="Menu Principal">
+        <a href="#resultados" class="hover:text-white transition-colors">Resultados Reais</a>
+        <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+        <a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a>
+        <a href="#sobre" class="hover:text-white transition-colors">Tradição 1972</a>
+        <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
+      </nav>
+
+      <!-- Ações Direita (Botão WhatsApp + Menu Mobile) -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AC%20Studio%20e%20gostaria%20de%20agendar%20um%20atendimento%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="btn-wa inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg text-xs sm:text-sm">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.535 5.86l-1.535 5.61 5.755-1.509c1.693.924 3.633 1.454 5.702 1.454 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+          <span>Agendar em Casa</span>
+        </a>
+
+        <button id="mobileMenuToggle" type="button" class="md:hidden p-2.5 rounded-lg border border-studio-graphite text-white hover:bg-studio-graphite transition-colors" aria-label="Abrir Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Expansível -->
+    <div id="mobileMenu" class="hidden md:hidden bg-studio-charcoal border-t border-studio-graphite px-4 py-4 space-y-3">
+      <a href="#resultados" class="block py-2 text-neutral-200 hover:text-white font-display font-medium border-b border-studio-graphite/60">Resultados Reais</a>
+      <a href="#servicos" class="block py-2 text-neutral-200 hover:text-white font-display font-medium border-b border-studio-graphite/60">Serviços a Domicílio</a>
+      <a href="#como-funciona" class="block py-2 text-neutral-200 hover:text-white font-display font-medium border-b border-studio-graphite/60">Como Funciona</a>
+      <a href="#sobre" class="block py-2 text-neutral-200 hover:text-white font-display font-medium border-b border-studio-graphite/60">Tradição Desde 1972</a>
+      <a href="#faq" class="block py-2 text-neutral-200 hover:text-white font-display font-medium">Perguntas Frequentes</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. HERO SECTION (DOBRA 1 OTIMIZADA PARA CONVERSÃO — 100% EM CASA)
+       ======================================================================== -->
+  <section id="inicio" class="bg-studio-black text-white pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-studio-graphite">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Coluna de Conteúdo (Prioridade Acima da Dobra no Mobile) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-neutral-700 bg-studio-charcoal text-xs sm:text-sm font-display font-semibold tracking-wider uppercase text-neutral-200">
+            <span class="w-2 h-2 rounded-full bg-whatsapp"></span>
+            <span>Desde 1972 no Imirim • Atendimento Exclusivo a Domicílio</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-[3.45rem] font-bold leading-[1.1] text-white">
+            O padrão de salão que o Imirim confia desde 1972, agora exclusivamente na sua casa.
+          </h1>
+
+          <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+            Mechas, coloração, tratamentos, corte masculino, barba, unhas e sobrancelhas com estrutura profissional completa no seu lar. <strong class="text-white font-semibold">Sem trânsito, sem fila e com zero bagunça.</strong>
+          </p>
+
+          <!-- Botões de Ação (Principal + Secundário) -->
+          <div class="space-y-3 pt-1">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AC%20Studio%20e%20gostaria%20de%20agendar%20um%20atendimento%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="btn-wa inline-flex items-center justify-center gap-3 px-7 py-4 rounded-lg text-base">
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.535 5.86l-1.535 5.61 5.755-1.509c1.693.924 3.633 1.454 5.702 1.454 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+                <span>Agendar Atendimento em Casa</span>
+              </a>
+
+              <a href="#resultados" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg border border-neutral-600 text-white hover:bg-white hover:text-studio-black font-display font-semibold text-sm sm:text-base transition-colors">
+                <span>Ver Resultados Reais</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </a>
+            </div>
+
+            <!-- Microcopy de Alívio de Fricção -->
+            <p class="text-xs sm:text-sm text-neutral-400 font-display flex items-center gap-2">
+              <span aria-hidden="true">⚡</span>
+              <span>Resposta rápida no WhatsApp • Avaliação capilar gratuita por foto</span>
+            </p>
+          </div>
+
+          <!-- Micro-checklist de Confiança -->
+          <div class="pt-4 border-t border-studio-graphite flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-neutral-300 font-display">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-whatsapp" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              +50 Anos no Imirim
+            </span>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-whatsapp" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Beleza Unissex & Família
+            </span>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-whatsapp" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Protocolo Casa Limpa
+            </span>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Painel Editorial de Autoridade ("1972 — Em Casa") -->
+        <div class="lg:col-span-5">
+          <aside class="relative rounded-2xl border border-neutral-800 bg-gradient-to-br from-[#161616] to-[#0B0B0B] p-7 sm:p-9 shadow-2xl">
+            <div class="border border-white/10 rounded-xl p-6 sm:p-7 space-y-6">
+              
+              <div class="flex items-baseline justify-between border-b border-neutral-800 pb-5">
+                <div>
+                  <span class="font-serif text-6xl sm:text-7xl font-bold text-white leading-none block">1972</span>
+                  <span class="font-display text-xs uppercase tracking-[0.2em] text-neutral-400 mt-2 block">Rua Artur, 38 • Imirim SP</span>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-white text-studio-black font-display font-bold text-xs uppercase tracking-wider">
+                  1972 — Em Casa
+                </span>
+              </div>
+
+              <p class="font-serif italic text-xl sm:text-2xl text-neutral-200 leading-snug">
+                “Mais de 5 décadas de tradição levadas até a sua residência com estrutura profissional.”
+              </p>
+
+              <ul class="space-y-3.5 text-sm text-neutral-300">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-whatsapp shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Atendimento <strong>exclusivamente a domicílio</strong> com hora marcada</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-whatsapp shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Levamos iluminação portátil, espelho próprio e linhas profissionais</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-whatsapp shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Pacotes familiares unissex (mulheres, homens e crianças na mesma visita)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-whatsapp shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Protocolo Casa Limpa:</strong> proteção de piso e zero bagunça</span>
+                </li>
+              </ul>
+
+              <div class="pt-3 border-t border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
+                <span>Imirim & Zona Norte — SP</span>
+                <span class="text-white font-display font-semibold">(11) 96467-7116</span>
+              </div>
+
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. BARRA DE CONFIANÇA (GRID 2X2 NO MOBILE E 4 COLUNAS NO DESKTOP)
+       ======================================================================== -->
+  <section class="bg-studio-alabaster py-10 sm:py-14 border-b border-studio-silver">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6 reveal">
+        
+        <!-- Pilar 1 -->
+        <div class="bg-white p-4 sm:p-6 rounded-xl border border-studio-silver shadow-sm">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-studio-black text-white flex items-center justify-center mb-3 sm:mb-4">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-sm sm:text-lg text-studio-black mb-1.5">Tradição Desde 1972</h3>
+          <p class="text-xs sm:text-sm text-studio-muted leading-relaxed">
+            Mais de 50 anos de história no Imirim, garantindo confiança total ao abrir a porta da sua casa.
+          </p>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="bg-white p-4 sm:p-6 rounded-xl border border-studio-silver shadow-sm">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-studio-black text-white flex items-center justify-center mb-3 sm:mb-4">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-sm sm:text-lg text-studio-black mb-1.5">100% a Domicílio</h3>
+          <p class="text-xs sm:text-sm text-studio-muted leading-relaxed">
+            Zero trânsito e zero fila de espera: levamos a estrutura completa direto ao seu endereço.
+          </p>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="bg-white p-4 sm:p-6 rounded-xl border border-studio-silver shadow-sm">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-studio-black text-white flex items-center justify-center mb-3 sm:mb-4">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-sm sm:text-lg text-studio-black mb-1.5">Beleza Unissex & Família</h3>
+          <p class="text-xs sm:text-sm text-studio-muted leading-relaxed">
+            Praticidade para agendar cabelo, corte masculino, barba, sobrancelha e unha na mesma visita.
+          </p>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="bg-white p-4 sm:p-6 rounded-xl border border-studio-silver shadow-sm">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-studio-black text-white flex items-center justify-center mb-3 sm:mb-4">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-sm sm:text-lg text-studio-black mb-1.5">Protocolo Casa Limpa</h3>
+          <p class="text-xs sm:text-sm text-studio-muted leading-relaxed">
+            Materiais esterilizados, proteção total de piso/móveis e ambiente impecável ao finalizar.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. PORTFÓLIO DE RESULTADOS REAIS (POSICIONADO ANTES DOS SERVIÇOS + TRIAGEM RÁPIDA)
+       ======================================================================== -->
+  <section id="resultados" class="py-16 sm:py-24 bg-white border-b border-studio-silver">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-[0.2em] text-studio-muted block mb-2">Portfólio Real AC Studio</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-studio-black mb-4">
+          Resultados reais realizados pela nossa equipe
+        </h2>
+        <p class="text-base sm:text-lg text-studio-muted">
+          Acabamento profissional de estúdio feito com conforto e segurança. Toque no resultado desejado para solicitar avaliação no WhatsApp.
+        </p>
+      </div>
+
+      <!-- Filtros Interativos por Categoria -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 reveal" role="tablist" aria-label="Filtrar resultados por categoria">
+        <button type="button" data-filter="all" class="filter-btn active px-4 py-2.5 rounded-lg text-xs sm:text-sm font-display font-semibold bg-studio-black text-white border border-studio-black transition-all">
+          Todos
+        </button>
+        <button type="button" data-filter="mechas" class="filter-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-display font-semibold bg-studio-alabaster text-studio-black border border-studio-silver hover:border-studio-black transition-all">
+          Mechas & Loiros
+        </button>
+        <button type="button" data-filter="cortes" class="filter-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-display font-semibold bg-studio-alabaster text-studio-black border border-studio-silver hover:border-studio-black transition-all">
+          Cortes & Masculino
+        </button>
+        <button type="button" data-filter="estetica" class="filter-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-display font-semibold bg-studio-alabaster text-studio-black border border-studio-silver hover:border-studio-black transition-all">
+          Sobrancelha & Unhas
+        </button>
+      </div>
+
+      <!-- Grid de 8 Trabalhos com Fotos Locais + Fallback Automático -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 reveal" id="portfolioGrid">
+        
+        <!-- 1. Loiro Perolado Iluminado -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="mechas">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="loiro-ondulado.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=700&q=80';" 
+              alt="Loiro Perolado Iluminado realizado pela AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Mechas & Loiros</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Loiro Perolado Iluminado</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20a%20foto%20do%20Loiro%20Perolado%20Iluminado%20no%20site%20da%20AC%20Studio%20e%20quero%20este%20resultado%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Morena Iluminada -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="mechas">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="morena-iluminada.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=700&q=80';" 
+              alt="Morena Iluminada com ondas naturais AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Mechas Ombré</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Morena Iluminada</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20a%20foto%20de%20Morena%20Iluminada%20no%20site%20da%20AC%20Studio%20e%20quero%20este%20resultado%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Corte Masculino Fade -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="cortes">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="corte-masculino.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=700&q=80';" 
+              alt="Corte Masculino Fade com acabamento preciso AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Cortes & Masculino</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Corte Masculino Fade</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20o%20Corte%20Masculino%20Fade%20no%20site%20da%20AC%20Studio%20e%20quero%20agendar%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Manicure & Pedicure -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="estetica">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="manicure.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=80';" 
+              alt="Manicure com acabamento natural e brilho sutil AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Sobrancelha & Unhas</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Manicure & Pedicure</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20as%20unhas%20no%20site%20da%20AC%20Studio%20e%20quero%20agendar%20Manicure%2FPedicure%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Chanel com Luzes -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="cortes">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="chanel-luzes.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=700&q=80';" 
+              alt="Corte Chanel com Luzes realizado pela AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Cortes & Masculino</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Chanel com Luzes</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20o%20Chanel%20com%20Luzes%20no%20site%20da%20AC%20Studio%20e%20quero%20este%20resultado%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Reflexos Dourados -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="mechas">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="mechas-douradas.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80';" 
+              alt="Reflexos Dourados e tratamento capilar AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Mechas & Loiros</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Reflexos Dourados</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20os%20Reflexos%20Dourados%20no%20site%20da%20AC%20Studio%20e%20quero%20este%20resultado%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Design de Sobrancelha -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="estetica">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="sobrancelhas.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=700&q=80';" 
+              alt="Atendimento de Design de Sobrancelha AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Sobrancelha & Unhas</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Design de Sobrancelha</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20o%20Design%20de%20Sobrancelha%20no%20site%20da%20AC%20Studio%20e%20quero%20agendar%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Luzes com Touca -->
+        <div class="portfolio-card group bg-studio-alabaster rounded-xl overflow-hidden border border-studio-silver shadow-sm flex flex-col" data-category="mechas">
+          <div class="aspect-[3/4] overflow-hidden bg-neutral-900">
+            <img 
+              src="luzes-touca.jpg" 
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=700&q=80';" 
+              alt="Luzes com Touca e escova modelada AC Studio" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            >
+          </div>
+          <div class="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-display font-semibold uppercase tracking-wider text-studio-muted">Mechas & Loiros</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-studio-black mt-0.5">Luzes com Touca</h4>
+            </div>
+            <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vi%20as%20Luzes%20com%20Touca%20no%20site%20da%20AC%20Studio%20e%20quero%20este%20resultado%20em%20casa." target="_blank" rel="noopener" class="mt-3 inline-flex items-center justify-between w-full px-3 py-2 rounded-lg bg-studio-black text-white text-xs font-display font-semibold hover:bg-neutral-800 transition-colors">
+              <span>Quero este resultado</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra de Triagem Rápida de 1 Clique para WhatsApp -->
+      <div class="mt-12 bg-studio-black text-white rounded-2xl p-6 sm:p-8 reveal">
+        <div class="text-center max-w-xl mx-auto mb-6">
+          <span class="text-xs font-display font-bold uppercase tracking-widest text-whatsapp">Triagem Rápida no WhatsApp</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">Qual cuidado você deseja agendar em casa?</h3>
+          <p class="text-xs sm:text-sm text-neutral-300 mt-1">Toque em uma opção abaixo para iniciar seu atendimento com a mensagem pronta:</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Quero%20enviar%20uma%20foto%20do%20meu%20cabelo%20para%20or%C3%A7ar%20Mechas%20ou%20Colora%C3%A7%C3%A3o%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3.5 rounded-xl bg-studio-charcoal border border-studio-graphite hover:border-whatsapp text-sm font-display font-semibold transition-all">
+            <span>✨ Orçar Mechas por Foto</span>
+            <span class="text-whatsapp">→</span>
+          </a>
+
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20Masculino%20e%20Barba%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3.5 rounded-xl bg-studio-charcoal border border-studio-graphite hover:border-whatsapp text-sm font-display font-semibold transition-all">
+            <span>✂️ Corte Masculino & Barba</span>
+            <span class="text-whatsapp">→</span>
+          </a>
+
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Manicure%2C%20Pedicure%20e%20Sobrancelha%20em%20casa." target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3.5 rounded-xl bg-studio-charcoal border border-studio-graphite hover:border-whatsapp text-sm font-display font-semibold transition-all">
+            <span>💅 Manicure & Sobrancelha</span>
+            <span class="text-whatsapp">→</span>
+          </a>
+
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Quero%20agendar%20um%20Combo%20Fam%C3%ADlia%20em%20Casa%20(mais%20de%20uma%20pessoa%20na%20mesma%20visita)." target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3.5 rounded-xl bg-whatsapp text-white hover:bg-whatsapp-hover text-sm font-display font-bold transition-all">
+            <span>🏠 Combo Família em Casa</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. MENU DE SERVIÇOS UNISSEX (3 CATEGORIAS CLARAS COM CTAS SEGMENTADOS)
+       ======================================================================== -->
+  <section id="servicos" class="py-16 sm:py-24 bg-studio-alabaster border-b border-studio-silver">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-[0.2em] text-studio-muted block mb-2">Catálogo de Serviços Unissex</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-studio-black mb-4">
+          Menu completo para você e sua família
+        </h2>
+        <p class="text-base sm:text-lg text-studio-muted">
+          Todos os procedimentos tradicionais da AC Studio realizados com equipamentos e linhas profissionais na privacidade do seu lar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 reveal">
+        
+        <!-- Card 1: Transformação & Cor -->
+        <article class="rounded-2xl border border-studio-silver bg-white p-7 sm:p-8 flex flex-col justify-between hover:border-studio-black transition-colors shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-studio-silver">
+              <span class="text-xs font-display font-bold uppercase tracking-widest text-studio-muted">01 • Transformação & Cor</span>
+              <svg class="w-5 h-5 text-studio-black" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-studio-black mb-3">Cabelos, Mechas & Coloração</h3>
+            <p class="text-sm text-studio-muted mb-6">
+              Diagnóstico cuidadoso dos fios para iluminar, renovar o corte ou colorir preservando o brilho e a saúde capilar.
+            </p>
+            <ul class="space-y-3 text-sm sm:text-base text-neutral-800 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Corte Feminino, Masculino e Infantil</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Mechas Ombré</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Luzes com Touca</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Coloração Tradicional</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Coloração Fashion</strong></span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20avalia%C3%A7%C3%A3o%20para%20Corte%2C%20Mechas%20ou%20Colora%C3%A7%C3%A3o%20a%20domic%C3%ADlio%20com%20a%20AC%20Studio." target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-studio-black text-white hover:bg-neutral-800 font-display font-semibold text-sm transition-colors">
+            <span>Solicitar Avaliação Capilar</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 2: Tratamentos & Finalização -->
+        <article class="rounded-2xl border-2 border-studio-black bg-studio-black text-white p-7 sm:p-8 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-studio-graphite">
+              <span class="text-xs font-display font-bold uppercase tracking-widest text-neutral-400">02 • Saúde & Alinhamento</span>
+              <span class="px-2.5 py-0.5 rounded bg-white text-studio-black text-[11px] font-display font-bold uppercase">Alta Procura</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white mb-3">Tratamentos & Finalização</h3>
+            <p class="text-sm text-neutral-300 mb-6">
+              Alinhamento, redução de frizz, nutrição intensa e acabamento impecável realizados no conforto da sua casa.
+            </p>
+            <ul class="space-y-3 text-sm sm:text-base text-neutral-200 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                <span><strong>Escova Progressiva</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                <span><strong>Botox Capilar</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                <span><strong>Hidratação Profunda</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                <span><strong>Escova Modelada</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                <span><strong>Escova de Tratamento</strong></span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Escova%2C%20Progressiva%2C%20Botox%20ou%20Hidrata%C3%A7%C3%A3o%20a%20domic%C3%ADlio%20com%20a%20AC%20Studio." target="_blank" rel="noopener" class="btn-wa w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg text-sm">
+            <span>Agendar Tratamento em Casa</span>
+          </a>
+        </article>
+
+        <!-- Card 3: Barbearia, Olhar & Unhas -->
+        <article class="rounded-2xl border border-studio-silver bg-white p-7 sm:p-8 flex flex-col justify-between hover:border-studio-black transition-colors shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-studio-silver">
+              <span class="text-xs font-display font-bold uppercase tracking-widest text-studio-muted">03 • Visagismo & Estética</span>
+              <svg class="w-5 h-5 text-studio-black" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-studio-black mb-3">Barbearia, Olhar & Unhas</h3>
+            <p class="text-sm text-studio-muted mb-6">
+              Acabamento preciso para o rosto, mãos e pés com materiais esterilizados e total comodidade para a família.
+            </p>
+            <ul class="space-y-3 text-sm sm:text-base text-neutral-800 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Barba</strong> (Desenho e Acabamento)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Design de Sobrancelha</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Manicure e Pedicure</strong></span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-studio-black"></span>
+                <span><strong>Pacotes Familiares</strong> na Mesma Visita</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Barba%2C%20Design%20de%20Sobrancelha%20ou%20Manicure%2FPedicure%20a%20domic%C3%ADlio%20com%20a%20AC%20Studio." target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-studio-black text-white hover:bg-neutral-800 font-display font-semibold text-sm transition-colors">
+            <span>Agendar Horário ou Combo</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. COMO FUNCIONA (3 PASSOS COM QUEBRA DE OBJEÇÃO DE BAGUNÇA)
+       ======================================================================== -->
+  <section id="como-funciona" class="py-16 sm:py-24 bg-studio-black text-white border-b border-studio-graphite">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-[0.2em] text-neutral-400 block mb-2">Praticidade em 3 Passos</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          Como funciona o atendimento na sua casa
+        </h2>
+        <p class="text-base sm:text-lg text-neutral-300">
+          Simples, pontual e com protocolo rigoroso de organização para você relaxar no próprio lar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+        
+        <!-- Passo 01 -->
+        <div class="bg-studio-charcoal border border-studio-graphite rounded-2xl p-8">
+          <span class="font-serif text-5xl font-bold text-white/25 block mb-4">01</span>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Escolha ou Envie uma Foto</h3>
+          <p class="text-sm sm:text-base text-neutral-300 leading-relaxed">
+            Chame no WhatsApp <strong class="text-white">(11) 96467-7116</strong>, diga o que deseja fazer ou envie uma foto do seu cabelo atual para receber uma avaliação e orçamento gratuito sem compromisso.
+          </p>
+        </div>
+
+        <!-- Passo 02 -->
+        <div class="bg-studio-charcoal border border-studio-graphite rounded-2xl p-8">
+          <span class="font-serif text-5xl font-bold text-white/25 block mb-4">02</span>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Agende no Seu Melhor Horário</h3>
+          <p class="text-sm sm:text-base text-neutral-300 leading-relaxed">
+            Escolha o dia e horário ideais para você no <strong class="text-white">Imirim ou Zona Norte</strong> — ou aproveite para agendar o atendimento de mais pessoas da família na mesma visita.
+          </p>
+        </div>
+
+        <!-- Passo 03 -->
+        <div class="bg-studio-charcoal border border-studio-graphite rounded-2xl p-8">
+          <span class="font-serif text-5xl font-bold text-white/25 block mb-4">03</span>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Salão em Casa e Zero Bagunça</h3>
+          <p class="text-sm sm:text-base text-neutral-300 leading-relaxed">
+            Levamos iluminação, espelho, produtos profissionais e proteção completa para o seu piso e móveis. Ao final, deixamos seu espaço impecável.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20minha%20visita%20a%20domic%C3%ADlio%20com%20a%20AC%20Studio." target="_blank" rel="noopener" class="btn-wa inline-flex items-center justify-center gap-3 px-7 py-4 rounded-lg text-base">
+          <span>Agendar Minha Visita Agora</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. SEÇÃO SOBRE ENXUTA E ESCANEÁVEL (TRADIÇÃO DESDE 1972)
+       ======================================================================== -->
+  <section id="sobre" class="py-16 sm:py-24 bg-white border-b border-studio-silver">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 reveal">
+      <div class="bg-studio-alabaster border border-studio-silver rounded-2xl p-8 sm:p-12 text-center space-y-6">
+        
+        <span class="text-xs font-display font-bold uppercase tracking-[0.2em] text-studio-muted block">Tradição & Confiança desde 1972</span>
+        
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-studio-black leading-tight">
+          Mais de 50 anos de história no Imirim, evoluindo com a sua rotina.
+        </h2>
+
+        <p class="text-base sm:text-lg text-neutral-700 leading-relaxed max-w-2xl mx-auto">
+          Fundada em <strong class="text-studio-black">1972 na Rua Artur, 38 (Imirim)</strong>, a <strong class="text-studio-black">AC Studio</strong> cuidou da beleza de gerações na Zona Norte de São Paulo. Hoje, dedicamos toda essa experiência <strong class="text-studio-black">exclusivamente ao atendimento a domicílio</strong>: você recebe profissionais de confiança absoluta dentro da sua casa, com biossegurança rigorosa e acabamento de estúdio.
+        </p>
+
+        <!-- 3 Indicadores Grandes e Escaneáveis -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 pb-4 border-t border-b border-studio-silver">
+          <div>
+            <strong class="font-serif text-4xl sm:text-5xl font-bold text-studio-black block">+50 Anos</strong>
+            <span class="text-xs sm:text-sm text-studio-muted font-display">Desde 1972 no Imirim</span>
+          </div>
+          <div>
+            <strong class="font-serif text-4xl sm:text-5xl font-bold text-studio-black block">100% em Casa</strong>
+            <span class="text-xs sm:text-sm text-studio-muted font-display">Exclusivo a Domicílio</span>
+          </div>
+          <div>
+            <strong class="font-serif text-4xl sm:text-5xl font-bold text-studio-black block">Unissex</strong>
+            <span class="text-xs sm:text-sm text-studio-muted font-display">Mulheres, Homens e Crianças</span>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20equipe%20da%20AC%20Studio%20sobre%20atendimento%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-7 py-4 rounded-lg bg-studio-black text-white hover:bg-neutral-800 font-display font-semibold text-sm sm:text-base transition-colors">
+            <span>Conversar com Nossa Equipe no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. DEPOIMENTOS COM SELO "ATENDIMENTO RESIDENCIAL VERIFICADO"
+       ======================================================================== -->
+  <section class="py-16 sm:py-20 bg-studio-alabaster border-b border-studio-silver">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-[0.2em] text-studio-muted block mb-2">Clientes da Zona Norte</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-studio-black">
+          Quem recebe a AC Studio em casa recomenda
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        
+        <blockquote class="bg-white p-7 rounded-2xl border border-studio-silver shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-studio-black tracking-widest text-sm" aria-label="5 estrelas">★★★★★</span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-display font-semibold text-[11px]">
+                ✓ Atendimento Residencial Verificado
+              </span>
+            </div>
+            <p class="text-neutral-700 text-sm sm:text-base leading-relaxed italic mb-6">
+              “Conheço o trabalho da AC Studio no Imirim há anos e o atendimento a domicílio facilitou demais a minha vida. Fiz mechas e hidratação em casa com toda a estrutura profissional, sem precisar pegar trânsito.”
+            </p>
+          </div>
+          <footer class="border-t border-studio-silver pt-4">
+            <strong class="font-display text-sm text-studio-black block">Mariana S., 38 anos</strong>
+            <span class="text-xs text-studio-muted">Imirim — São Paulo</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-7 rounded-2xl border border-studio-silver shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-studio-black tracking-widest text-sm" aria-label="5 estrelas">★★★★★</span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-display font-semibold text-[11px]">
+                ✓ Atendimento Residencial Verificado
+              </span>
+            </div>
+            <p class="text-neutral-700 text-sm sm:text-base leading-relaxed italic mb-6">
+              “Agendo corte masculino, barba e a escova da minha esposa no mesmo dia. Os profissionais são super pontuais, educados e deixam tudo limpo e impecável quando terminam. Recomendo de olhos fechados.”
+            </p>
+          </div>
+          <footer class="border-t border-studio-silver pt-4">
+            <strong class="font-display text-sm text-studio-black block">Roberto M., 46 anos</strong>
+            <span class="text-xs text-studio-muted">Mandaqui — Zona Norte</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-7 rounded-2xl border border-studio-silver shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-studio-black tracking-widest text-sm" aria-label="5 estrelas">★★★★★</span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-display font-semibold text-[11px]">
+                ✓ Atendimento Residencial Verificado
+              </span>
+            </div>
+            <p class="text-neutral-700 text-sm sm:text-base leading-relaxed italic mb-6">
+              “Para quem tem rotina corrida ou prefere mais privacidade, é perfeito. Fiz design de sobrancelha e manicure em casa e o capricho nos detalhes faz toda a diferença.”
+            </p>
+          </div>
+          <footer class="border-t border-studio-silver pt-4">
+            <strong class="font-display text-sm text-studio-black block">Cláudia R., 54 anos</strong>
+            <span class="text-xs text-studio-muted">Casa Verde — Zona Norte</span>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. REGIÃO ATENDIDA & PERGUNTAS FREQUENTES (FAQ INTERATIVO)
+       ======================================================================== -->
+  <section id="faq" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <!-- Faixa de Cobertura Regional -->
+      <div class="bg-studio-black text-white rounded-2xl p-6 sm:p-8 mb-14 reveal flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-display font-bold uppercase tracking-widest text-neutral-400">Região de Atendimento a Domicílio</span>
+          <h3 class="font-display font-bold text-xl sm:text-2xl text-white mt-1">Imirim e Zona Norte de São Paulo</h3>
+          <p class="text-sm text-neutral-300 mt-2 leading-relaxed">
+            Atendemos em domicílio no <strong>Imirim, Casa Verde, Mandaqui, Santana, Lauzane Paulista e Cachoeirinha</strong>.
+          </p>
+        </div>
+        <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20disponibilidade%20de%20atendimento%20a%20domic%C3%ADlio%20no%20meu%20bairro." target="_blank" rel="noopener" class="btn-wa px-5 py-3 rounded-lg text-xs sm:text-sm shrink-0 text-center">
+          Consultar Meu Bairro
+        </a>
+      </div>
+
+      <!-- Título FAQ -->
+      <div class="text-center mb-10 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-[0.2em] text-studio-muted block mb-2">Dúvidas Frequentes</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-studio-black">
+          Perguntas sobre o atendimento em casa
+        </h2>
+      </div>
+
+      <!-- Lista Acordeão Interativa -->
+      <div class="space-y-3.5 reveal" id="faqList">
+        
+        <!-- Pergunta 1 -->
+        <div class="faq-item open border border-studio-silver rounded-xl bg-studio-alabaster/60 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-studio-black" aria-expanded="true">
+            <span>Vocês ainda atendem em salão físico ou apenas a domicílio?</span>
+            <span class="faq-chevron w-8 h-8 rounded-full border border-studio-silver bg-white flex items-center justify-center text-lg font-normal shrink-0 transition-all duration-300">+</span>
+          </button>
+          <div class="faq-content" style="max-height: 220px;">
+            <div class="px-5 sm:px-6 pb-5 text-sm sm:text-base text-neutral-700 leading-relaxed border-t border-studio-silver/60 pt-3.5">
+              Atualmente trabalhamos <strong>exclusivamente com atendimento especializado a domicílio</strong>. Levamos toda a tradição de mais de 50 anos da AC Studio no Imirim diretamente até o conforto da sua residência com hora marcada.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="faq-item border border-studio-silver rounded-xl bg-studio-alabaster/60 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-studio-black" aria-expanded="false">
+            <span>O que eu preciso preparar em casa para receber o atendimento?</span>
+            <span class="faq-chevron w-8 h-8 rounded-full border border-studio-silver bg-white flex items-center justify-center text-lg font-normal shrink-0 transition-all duration-300">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 sm:px-6 pb-5 text-sm sm:text-base text-neutral-700 leading-relaxed border-t border-studio-silver/60 pt-3.5">
+              Apenas um espaço ventilado com acesso a uma tomada comum (e uma pia ou lavatório próximo, caso o serviço envolva lavagem capilar). Nossa equipe leva espelho portátil, iluminação, capas de proteção e todos os equipamentos necessários.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="faq-item border border-studio-silver rounded-xl bg-studio-alabaster/60 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-studio-black" aria-expanded="false">
+            <span>Vocês levam todos os produtos e materiais esterilizados?</span>
+            <span class="faq-chevron w-8 h-8 rounded-full border border-studio-silver bg-white flex items-center justify-center text-lg font-normal shrink-0 transition-all duration-300">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 sm:px-6 pb-5 text-sm sm:text-base text-neutral-700 leading-relaxed border-t border-studio-silver/60 pt-3.5">
+              Sim. Trabalhamos com linhas profissionais para cabelos, unhas e sobrancelhas, além de materiais descartáveis e devidamente esterilizados seguindo rigorosos padrões de higiene e biossegurança.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="faq-item border border-studio-silver rounded-xl bg-studio-alabaster/60 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-studio-black" aria-expanded="false">
+            <span>Posso agendar serviços para mais de uma pessoa da família na mesma visita?</span>
+            <span class="faq-chevron w-8 h-8 rounded-full border border-studio-silver bg-white flex items-center justify-center text-lg font-normal shrink-0 transition-all duration-300">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 sm:px-6 pb-5 text-sm sm:text-base text-neutral-700 leading-relaxed border-t border-studio-silver/60 pt-3.5">
+              Com certeza. Atendemos o público feminino, masculino e infantil, permitindo combinar diferentes serviços (como corte, escova, barba, manicure e sobrancelha) no mesmo agendamento.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pergunta 5 -->
+        <div class="faq-item border border-studio-silver rounded-xl bg-studio-alabaster/60 overflow-hidden">
+          <button type="button" class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-studio-black" aria-expanded="false">
+            <span>Como funciona o orçamento para mechas, luzes ou coloração a domicílio?</span>
+            <span class="faq-chevron w-8 h-8 rounded-full border border-studio-silver bg-white flex items-center justify-center text-lg font-normal shrink-0 transition-all duration-300">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 sm:px-6 pb-5 text-sm sm:text-base text-neutral-700 leading-relaxed border-t border-studio-silver/60 pt-3.5">
+              Pelo WhatsApp <strong>(11) 96467-7116</strong>, você pode nos enviar uma foto do seu cabelo atual e contar o resultado que deseja. Assim, passamos uma avaliação transparente antes mesmo da visita.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. DOBRA FINAL DE CONVERSÃO & RODAPÉ INSTITUCIONAL
+       ======================================================================== -->
+  <section class="bg-studio-black text-white py-16 sm:py-24 border-t border-studio-graphite">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
+      <span class="inline-block px-3.5 py-1 rounded-full border border-neutral-700 text-xs font-display uppercase tracking-widest text-neutral-300 mb-5">
+        AC Studio • Tradição Desde 1972 no Imirim
+      </span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+        Pronta(o) para cuidar do visual sem precisar sair de casa?
+      </h2>
+      <p class="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto mb-9 leading-relaxed">
+        Consulte os horários disponíveis desta semana no Imirim e Zona Norte ou peça uma avaliação rápida pelo WhatsApp.
+      </p>
+      <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AC%20Studio%20e%20gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="btn-wa inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base sm:text-lg">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.535 5.86l-1.535 5.61 5.755-1.509c1.693.924 3.633 1.454 5.702 1.454 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+        <span>Agendar Meu Horário pelo WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Rodapé Institucional -->
+  <footer class="bg-[#050505] text-neutral-400 py-12 border-t border-studio-graphite text-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-studio-graphite">
+        
+        <!-- Logotipo Rodapé -->
+        <div>
+          <svg class="h-12 w-auto mb-3" viewBox="0 0 190 78" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AC Studio">
+            <path d="M40 46L55 12L70 46M45 35H65" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M89 6C81 24 98 44 88 62" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M137 18.5C133.5 14.5 128.5 12 122.5 12C112 12 104 20 104 29C104 38 112 46 122.5 46C128.5 46 133.5 43.5 137 39.5" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round"/>
+            <text x="95" y="71" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="400" letter-spacing="6.5">STUDIO</text>
+          </svg>
+          <p class="text-neutral-400">Beleza Unissex • Atendimento Especializado Exclusivamente a Domicílio</p>
+        </div>
+
+        <!-- Região e Contato Oficial -->
+        <div class="space-y-1.5 md:text-right">
+          <p class="text-white font-display font-semibold">Tradição desde 1972 (Rua Artur, 38 - Imirim, São Paulo - SP)</p>
+          <p>Atendimento exclusivo em domicílio mediante agendamento</p>
+          <p>
+            WhatsApp Oficial: <a href="https://wa.me/5511964677116" target="_blank" rel="noopener" class="text-white font-semibold hover:underline">(11) 96467-7116</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+        <p>© 2026 AC Studio — Mais de 50 anos de tradição. Todos os direitos reservados.</p>
+        <p>Imirim • Casa Verde • Mandaqui • Santana • Zona Norte SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BOTÃO FLUTUANTE DE WHATSAPP COM SELO "AGENDA ABERTA • ZN"
+       ======================================================================== -->
+  <a href="https://wa.me/5511964677116?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AC%20Studio%20e%20gostaria%20de%20agendar%20um%20atendimento%20a%20domic%C3%ADlio." target="_blank" rel="noopener" class="wa-float-pulse fixed bottom-5 right-5 z-50 bg-whatsapp hover:bg-whatsapp-hover text-white p-3.5 sm:px-5 sm:py-3 rounded-full shadow-2xl flex items-center gap-3 transition-transform hover:scale-105" aria-label="Agendar pelo WhatsApp (11) 96467-7116">
+    <svg class="w-7 h-7 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.535 5.86l-1.535 5.61 5.755-1.509c1.693.924 3.633 1.454 5.702 1.454 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+    <div class="hidden sm:flex flex-col text-left leading-tight">
+      <span class="text-[10px] uppercase tracking-wider font-display font-semibold text-white/90">Agenda aberta • ZN</span>
+      <span class="font-display font-bold text-sm">Agendar em Casa</span>
+    </div>
+  </a>
+
+  <!-- ========================================================================
+       JAVASCRIPT INTERATIVO (MENU MOBILE, FILTRO DE PORTFÓLIO, FAQ E ANIMAÇÃO)
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Toggle do Menu Mobile
+      const menuBtn = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+
+      // 2. Filtro de Categorias do Portfólio Real
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selected = btn.getAttribute('data-filter');
+
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-studio-black', 'text-white', 'border-studio-black');
+            b.classList.add('bg-studio-alabaster', 'text-studio-black', 'border-studio-silver');
+          });
+          btn.classList.remove('bg-studio-alabaster', 'text-studio-black', 'border-studio-silver');
+          btn.classList.add('bg-studio-black', 'text-white', 'border-studio-black');
+
+          portfolioCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (selected === 'all' || category === selected) {
+              card.classList.remove('hidden-item');
+            } else {
+              card.classList.add('hidden-item');
+            }
+          });
+        });
+      });
+
+      // 3. Acordeão Interativo do FAQ
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        const content = item.querySelector('.faq-content');
+
+        trigger.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+
+          faqItems.forEach(other => {
+            other.classList.remove('open');
+            other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-content').style.maxHeight = null;
+          });
+
+          if (!isOpen) {
+            item.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // 4. Animação Leve de Entrada (IntersectionObserver)
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+</body>
+</html>
